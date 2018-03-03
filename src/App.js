@@ -23,17 +23,34 @@ class App extends Component {
           Toggle
         </button>
         <div>Header</div>
-        <DelayUnmount
-          component={state.show ? <C1 myProp="AA" /> : <C1 myProp="BB" />}
-          animationHide={"hide-right 1s"}
-          animationShow={"show-left 1s"}
-        />
-
-                <DelayUnmount
-          component={state.show ? <C1 myProp="CC" /> : <C1 myProp="DD" />}
-          animationHide={"hide-left 1s"}
-          animationShow={"show-right 1s"}
-        />
+        <div
+          style={{
+            border: "1px solid blue",
+            margin: "auto",
+            width: "100px",
+            height: "100px"
+          }}
+        >
+          <DelayUnmount
+            component={state.show ? <C1 myProp="AA" /> : <C1 myProp="BB" />}
+            animationHide={"hide-right 1s"}
+            animationShow={"show-left 1s"}
+          />
+        </div>
+        <div
+          style={{
+            border: "1px solid blue",
+            margin: "auto",
+            width: "100px",
+            height: "100px"
+          }}
+        >
+          <DelayUnmount
+            component={state.show ? <C1 myProp="CC" /> : <C1 myProp="DD" />}
+            animationHide={"hide-left 1s"}
+            animationShow={"show-right 1s"}
+          />
+        </div>
         <div>Footer</div>
       </div>
     );
