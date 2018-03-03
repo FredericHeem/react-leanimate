@@ -26,11 +26,20 @@
   height: 80px;
   width: 80px;
 }
-@keyframes show {
+@keyframes show-left {
   from { transform: translateX(-100%); opacity: 0}
     to { transform: translateX(0%); opacity: 1 }
 }
-@keyframes hide {
+@keyframes hide-right {
     from { transform: translateX(0%); opacity: 1}
     to { transform: translateX(100%); opacity: 0 }
+}
+
+@keyframes show-right {
+  from { transform: translateX(100%); opacity: 0}
+    to { transform: translateX(0%); opacity: 1 }
+}
+@keyframes hide-left {
+    from { transform: translateX(0%); opacity: 1}
+    to { transform: translateX(-100%); opacity: 0 }
 }

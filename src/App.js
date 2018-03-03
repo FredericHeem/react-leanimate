@@ -22,13 +22,19 @@ class App extends Component {
         <button onClick={() => this.setState({ show: !state.show })}>
           Toggle
         </button>
-        <div>CC</div>
+        <div>Header</div>
         <DelayUnmount
           component={state.show ? <C1 myProp="AA" /> : <C1 myProp="BB" />}
-          animationHide={"hide 1s"}
-          animationShow={"show 1s"}
+          animationHide={"hide-right 1s"}
+          animationShow={"show-left 1s"}
         />
-        <div>CC</div>
+
+                <DelayUnmount
+          component={state.show ? <C1 myProp="CC" /> : <C1 myProp="DD" />}
+          animationHide={"hide-left 1s"}
+          animationShow={"show-right 1s"}
+        />
+        <div>Footer</div>
       </div>
     );
   }

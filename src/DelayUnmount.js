@@ -38,7 +38,7 @@ export default class DelayUnmount extends Component {
     const { state } = this;
     console.log("render ", state);
     return (
-      <div>
+      <div style={{width: "100px", height: "100px"}}>
         <div
           ref={node => {
             if (node && node.innerHTML) {
