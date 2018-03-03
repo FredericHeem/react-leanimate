@@ -3,7 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import DelayUnmount from "./DelayUnmount";
 
-const C1 = ({ myProp }) => <div className="carousel">{myProp}</div>;
+const BoxM = ({ myProp }) => <div className="box-m">{myProp}</div>;
+const BoxL = ({ myProp }) => <div className="box-l">{myProp}</div>;
 
 class App extends Component {
   state = {
@@ -22,17 +23,16 @@ class App extends Component {
         <button onClick={() => this.setState({ show: !state.show })}>
           Toggle
         </button>
-        <div>Header</div>
         <div
           style={{
             border: "1px solid blue",
             margin: "auto",
-            width: "100px",
-            height: "100px"
+            width: "200px",
+            height: "200px"
           }}
         >
           <DelayUnmount
-            component={state.show ? <C1 myProp="AA" /> : <C1 myProp="BB" />}
+            component={state.show ? <BoxM myProp="AA" /> : <BoxL myProp="BB" />}
             animationHide={"hide-right 1s"}
             animationShow={"show-left 1s"}
           />
@@ -46,12 +46,11 @@ class App extends Component {
           }}
         >
           <DelayUnmount
-            component={state.show ? <C1 myProp="CC" /> : <C1 myProp="DD" />}
+            component={state.show ? <BoxL myProp="CC" /> : <BoxM myProp="DD" />}
             animationHide={"hide-left 1s"}
             animationShow={"show-right 1s"}
           />
         </div>
-        <div>Footer</div>
       </div>
     );
   }

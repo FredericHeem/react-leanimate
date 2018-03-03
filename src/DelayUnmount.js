@@ -24,7 +24,6 @@ export default class DelayUnmount extends Component {
 
   render() {
     const { state } = this;
-    console.log("render ", state);
     return (
       <div>
         <div
@@ -58,7 +57,6 @@ export default class DelayUnmount extends Component {
               node.addEventListener("animationend", animationBeginHandler);
             }
           }}
-          style={{ position: "absolute" }}
         >
           {state.current}
         </div>
