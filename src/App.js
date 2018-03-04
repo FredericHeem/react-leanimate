@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import DelayUnmount from "./DelayUnmount";
+import Animate from "./Animate";
 
 const BoxM = ({ myProp }) => <div className="box-m">{myProp}</div>;
 const BoxL = ({ myProp }) => <div className="box-l">{myProp}</div>;
@@ -33,10 +33,8 @@ class App extends Component {
           }}
         >
           {state.show && (
-            <DelayUnmount
-              component={
-                state.show ? <BoxM myProp="AA" /> : <BoxL myProp="BB" />
-              }
+            <Animate
+              component={<BoxM myProp="AA" />}
               animationHide={"hide-right 1s"}
               animationShow={"show-left 1s"}
             />
@@ -52,7 +50,7 @@ class App extends Component {
             marginTop: "10px"
           }}
         >
-          <DelayUnmount
+          <Animate
             component={state.show ? <BoxM myProp="AA" /> : <BoxL myProp="BB" />}
             animationHide={"hide-right 1s"}
             animationShow={"show-left 1s"}
@@ -67,7 +65,7 @@ class App extends Component {
             marginTop: "10px"
           }}
         >
-          <DelayUnmount
+          <Animate
             component={state.show ? <BoxL myProp="CC" /> : <BoxM myProp="DD" />}
             animationHide={"hide-left 1s"}
             animationShow={"show-right 1s"}
