@@ -6,7 +6,6 @@
   "private": false,
   "main": "dist/react-leanimate.js",
   "umd:main": "dist/react-leanimate.umd.js",
-  "module": "dist/react-leanimate.m.js",
   "source": "src/Animate.js",
   "keywords": [
     "react",
@@ -29,7 +28,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build:lib": "microbundle src/Animate.js --external all",
+    "build:lib": "microbundle src/Animate.js --external all --jsx React.createElement",
     "postversion": "git push && git push --tags",
     "prepare": "npm run build:lib"
   },
