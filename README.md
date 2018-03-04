@@ -40,6 +40,8 @@ class Toggler extends Component {
 
 ```
 
+[![Edit react-leanimate example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/rj3m0jq3o4)
+
 ## Installing this library
 
 The library is published under the *react-leanimate* name
