@@ -27,8 +27,27 @@ class App extends Component {
           style={{
             border: "1px solid blue",
             margin: "auto",
-            width: "200px",
-            height: "200px"
+            width: "120px",
+            height: "120px"
+          }}
+        >
+          {state.show && (
+            <DelayUnmount
+              component={
+                state.show ? <BoxM myProp="AA" /> : <BoxL myProp="BB" />
+              }
+              animationHide={"hide-right 1s"}
+              animationShow={"show-left 1s"}
+            />
+          )}
+        </div>
+        <div
+          style={{
+            border: "1px solid blue",
+            margin: "auto",
+            width: "120px",
+            height: "120px",
+            'margin-top': "10px"
           }}
         >
           <DelayUnmount
@@ -42,7 +61,8 @@ class App extends Component {
             border: "1px solid blue",
             margin: "auto",
             width: "100px",
-            height: "100px"
+            height: "100px",
+            'margin-top': "10px"
           }}
         >
           <DelayUnmount
