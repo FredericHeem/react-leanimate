@@ -1,4 +1,4 @@
-#react-leanimate http://img.badgesize.io/fredericheem/react-leanimate/master/src/Animate.js.svg?compression=gzip
+# react-leanimate ![](http://img.badgesize.io/fredericheem)/react-leanimate/master/src/Animate.js.svg?compression=gzip
 
 Animate your react application with a lightweight component.  
 
