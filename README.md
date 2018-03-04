@@ -1,5 +1,4 @@
-# react-leanimate ![](http://img.badgesize.io/fredericheem/react-leanimate/master/src/Animate.js.svg?compression=gzip)
-
+# react-leanimate ![](http://img.badgesize.io/fredericheem/react-leanimate/master/src/Animate.js.svg?compression=gzip) [![npm version](https://badge.fury.io/js/react-leanimate.svg)](https://badge.fury.io/js/react-leanimate)
 Animate your react application with a lightweight component.  
 
 The problem with animating a react component is simple, you cannot animate a component that has been removed from the DOM. 
