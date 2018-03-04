@@ -16,10 +16,12 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "build:lib": "microbundle src/Animate.js --external all"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.14",
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.1.0",
+    "microbundle": "^0.4.4"
   }
 }

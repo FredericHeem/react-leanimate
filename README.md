@@ -40,3 +40,28 @@ class Toggler extends Component {
 ```
 
 
+## Building the library
+
+[microbundle](https://github.com/developit/microbundle) is the underlying tool to produce size efficient bundles.
+
+```sh
+$ npm run build:lib
+Build output to dist:
+        588 B: react-leanimate.js
+        573 B: react-leanimate.m.js
+        662 B: react-leanimate.umd.js
+ ```
+
+## Modifying this library
+
+Start a development server using:
+
+    $ npm run build
+
+You can also develop with [storybook](https://github.com/storybooks/storybook)
+
+    $ npm run storybook
+
+
+
+

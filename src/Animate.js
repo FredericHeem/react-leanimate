@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
-export default class Animate extends Component {
-  state = {
-    current: null
-  };
-
+export default class Animate extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      current: null
+    };
+  }
+  
   componentWillMount() {
     this.setState({ current: this.props.component });
   }
