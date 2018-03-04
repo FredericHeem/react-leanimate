@@ -39,8 +39,14 @@ class Toggler extends Component {
 
 ```
 
+## Installing this library
 
-## Building the library
+The library is published under the *react-leanimate* name
+
+    $ npm i react-leanimate
+
+
+## Building this library
 
 [microbundle](https://github.com/developit/microbundle) is the underlying tool to produce size efficient bundles.
 
