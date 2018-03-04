@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import "../App.css";
 import Animate from "../Animate";
+import Toggler from "./Toggler";
 
 const BoxM = ({ myProp }) => <div className="box-m">{myProp}</div>;
 const BoxL = ({ myProp }) => <div className="box-l">{myProp}</div>;
@@ -59,4 +60,6 @@ storiesOf("Animate", module)
         />
       )}
     </Toggle>
+  )).add("toggler example", () => (
+    <Toggler/>
   ));

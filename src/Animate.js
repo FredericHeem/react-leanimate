@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class DelayUnmount extends Component {
+export default class Animate extends Component {
   state = {
     current: null
   };
