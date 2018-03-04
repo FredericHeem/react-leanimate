@@ -23,6 +23,7 @@ class App extends Component {
         <button onClick={() => this.setState({ show: !state.show })}>
           Toggle
         </button>
+        <h2>Component removed</h2>
         <div
           style={{
             border: "1px solid blue",
@@ -41,6 +42,7 @@ class App extends Component {
             />
           )}
         </div>
+        <h2>Component replaced</h2>
         <div
           style={{
             border: "1px solid blue",
