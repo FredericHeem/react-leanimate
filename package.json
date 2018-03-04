@@ -29,7 +29,9 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build:lib": "microbundle src/Animate.js --external all"
+    "build:lib": "microbundle src/Animate.js --external all",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm run build:lib"
   },
   "devDependencies": {
     "@storybook/react": "^3.3.14",
