@@ -23,13 +23,13 @@ export default class DelayUnmount extends Component {
   }
 
   componentWillUnmount() {
-    this.saveNode(this.nodeCurrent);
+    this.saveNode(this.nodeCurrent, true);
   }
 
-  saveNode(node) {
+  saveNode(node, removal) {
     if (node && node.innerHTML) {
       const nodeCloned = node.cloneNode(true);
-      nodeCloned.style.position = "fixed";
+
       let rect = node.firstChild.getBoundingClientRect();
       if (rect.width === 0) {
         rect = this.nodeCurrentRect;
@@ -37,12 +37,19 @@ export default class DelayUnmount extends Component {
       nodeCloned.style.left = `${rect.left}px`;
       nodeCloned.style.top = `${rect.top}px`;
       nodeCloned.style.animation = this.props.animationHide;
-      document.body.appendChild(nodeCloned);
+      nodeCloned.style.position = "fixed";
+      if (removal) {
+        document.body.appendChild(nodeCloned);
+      } else {
+        node.insertAdjacentElement("afterend", nodeCloned);
+      }
       const animationEndHandler = () => {
         nodeCloned.parentNode.removeChild(nodeCloned);
       };
 
-      nodeCloned.addEventListener("animationend", animationEndHandler);
+      nodeCloned.addEventListener("animationend", () =>
+        nodeCloned.parentNode.removeChild(nodeCloned)
+      );
     }
   }
   render() {
