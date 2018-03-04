@@ -10,6 +10,10 @@ export default class DelayUnmount extends Component {
     this.setState({ current: this.props.component });
   }
 
+  componentDidMount() {
+    this.nodeCurrentRect = this.nodeCurrent.firstChild.getBoundingClientRect();
+  }
+
   componentWillReceiveProps(nextProps) {
     const { state } = this;
     const nextComponent = nextProps.component;
@@ -17,30 +21,37 @@ export default class DelayUnmount extends Component {
       this.setState({ previous: state.current, current: nextComponent });
     }
   }
+
   componentWillUnmount() {
     const { nodeCurrent } = this;
-    console.log("componentWillUnmount ", nodeCurrent)
     if (nodeCurrent) {
       const nodeCloned = nodeCurrent.cloneNode(true);
       nodeCloned.style.position = "fixed";
-      const rect = nodeCurrent.firstChild.getBoundingClientRect();
+      let rect = nodeCurrent.firstChild.getBoundingClientRect();
+      if(rect.width == 0){
+        rect = this.nodeCurrentRect
+      }
       nodeCloned.style.left = `${rect.left}px`;
       nodeCloned.style.top = `${rect.top}px`;
       document.body.appendChild(nodeCloned);
-console.log("rect ", rect)
-      //nodeCurrent.parentNode.insertAdjacentElement("afterend", nodeCloned);
       this.saveNode(nodeCloned);
     }
   }
+
   saveNode(node) {
     if (node && node.innerHTML) {
+      //node.style.display = "block";
       node.style.visibility = "visible";
       node.style.animation = this.props.animationHide;
 
       const animationEndHandler = () => {
         node.removeEventListener("animationend", animationEndHandler);
+        //node.style.display = "none";
         node.style.visibility = "hidden";
         node.style.animation = "";
+        /*while (node.firstChild) {
+          node.removeChild(node.firstChild);
+        }*/
       };
 
       node.addEventListener("animationend", animationEndHandler);
@@ -50,11 +61,10 @@ console.log("rect ", rect)
     const { state } = this;
     const me = this;
     return (
-      <div className="animate">
+      <div>
         <div
           ref={node => {
-            console.log("previous ", node);
-            this.saveNode(node)
+            this.saveNode(node);
           }}
           style={{ position: "absolute" }}
         >
@@ -63,8 +73,6 @@ console.log("rect ", rect)
         <div
           ref={node => {
             if (node && node.innerHTML) {
-              console.log("new rect ", node, node.getBoundingClientRect())
-
               node.style.animation = this.props.animationShow;
               const animationBeginHandler = () => {
                 node.removeEventListener("animationend", animationBeginHandler);
