@@ -2,11 +2,11 @@
   "name": "react-leanimate",
   "description": "a lightweight library to animate react components",
   "homepage": "http://fredericheem.github.io/react-leanimate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "main": "dist/react-leanimate.js",
-  "umd:main": "dist/react-leanimate.umd.js", 
-  "module": "dist/react-leanimate.m.js",  
+  "umd:main": "dist/react-leanimate.umd.js",
+  "module": "dist/react-leanimate.m.js",
   "source": "src/Animate.js",
   "keywords": [
     "react",
@@ -36,15 +36,15 @@
     "gh-pages": "^1.1.0",
     "microbundle": "^0.4.4"
   },
-  "bugs": { 
-    "url" : "https://github.com/FredericHeem/react-leanimate/issues"
+  "bugs": {
+    "url": "https://github.com/FredericHeem/react-leanimate/issues"
   },
-  "repository" :{ 
-    "type" : "git",
-    "url" : "github:FredericHeem/react-leanimate"
+  "repository": {
+    "type": "git",
+    "url": "github:FredericHeem/react-leanimate"
   },
-  "license" : "MIT",
-  "files":[
+  "license": "MIT",
+  "files": [
     "dist",
     "src/Animate.js"
   ]
