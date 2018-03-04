@@ -18,7 +18,7 @@ export default class DelayUnmount extends Component {
     const nextComponent = nextProps.component;
     if (nextComponent !== state.current) {
       this.saveNode(this.nodeCurrent);
-      this.setState({ previous: state.current, current: nextComponent });
+      this.setState({ current: nextComponent });
     }
   }
 
@@ -43,9 +43,6 @@ export default class DelayUnmount extends Component {
       } else {
         node.insertAdjacentElement("afterend", nodeCloned);
       }
-      const animationEndHandler = () => {
-        nodeCloned.parentNode.removeChild(nodeCloned);
-      };
 
       nodeCloned.addEventListener("animationend", () =>
         nodeCloned.parentNode.removeChild(nodeCloned)
