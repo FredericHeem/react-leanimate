@@ -12,21 +12,23 @@ export default class DelayUnmount extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { state } = this;
-    let nextComponent = nextProps.component;
+    const nextComponent = nextProps.component;
     if (nextComponent !== state.current) {
       this.setState({ previous: state.current, current: nextComponent });
     }
   }
   componentWillUnmount() {
     const { nodeCurrent } = this;
+    console.log("componentWillUnmount ", nodeCurrent)
     if (nodeCurrent) {
       const nodeCloned = nodeCurrent.cloneNode(true);
-      const parent = nodeCurrent.parentNode;
       nodeCloned.style.position = "fixed";
       const rect = nodeCurrent.firstChild.getBoundingClientRect();
       nodeCloned.style.left = `${rect.left}px`;
       nodeCloned.style.top = `${rect.top}px`;
-      nodeCurrent.parentNode.insertAdjacentElement("afterend", nodeCloned);
+      document.body.appendChild(nodeCloned);
+console.log("rect ", rect)
+      //nodeCurrent.parentNode.insertAdjacentElement("afterend", nodeCloned);
       this.saveNode(nodeCloned);
     }
   }
@@ -35,7 +37,7 @@ export default class DelayUnmount extends Component {
       node.style.visibility = "visible";
       node.style.animation = this.props.animationHide;
 
-      const animationEndHandler = ev => {
+      const animationEndHandler = () => {
         node.removeEventListener("animationend", animationEndHandler);
         node.style.visibility = "hidden";
         node.style.animation = "";
@@ -48,7 +50,7 @@ export default class DelayUnmount extends Component {
     const { state } = this;
     const me = this;
     return (
-      <div>
+      <div className="animate">
         <div
           ref={node => {
             console.log("previous ", node);
@@ -61,8 +63,10 @@ export default class DelayUnmount extends Component {
         <div
           ref={node => {
             if (node && node.innerHTML) {
+              console.log("new rect ", node, node.getBoundingClientRect())
+
               node.style.animation = this.props.animationShow;
-              const animationBeginHandler = ev => {
+              const animationBeginHandler = () => {
                 node.removeEventListener("animationend", animationBeginHandler);
                 node.style.animation = "";
               };

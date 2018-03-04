@@ -47,7 +47,7 @@ class App extends Component {
             margin: "auto",
             width: "120px",
             height: "120px",
-            'margin-top': "10px"
+            marginTop: "10px"
           }}
         >
           <DelayUnmount
@@ -62,7 +62,7 @@ class App extends Component {
             margin: "auto",
             width: "100px",
             height: "100px",
-            'margin-top': "10px"
+            marginTop: "10px"
           }}
         >
           <DelayUnmount
