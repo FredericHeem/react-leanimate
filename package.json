@@ -4,6 +4,18 @@
   "homepage": "http://fredericheem.github.io/react-leanimate",
   "version": "0.1.0",
   "private": false,
+  "main": "dist/react-leanimate.js",
+  "umd:main": "dist/react-leanimate.umd.js", 
+  "module": "dist/react-leanimate.m.js",  
+  "source": "src/Animate.js",
+  "keywords": [
+    "react",
+    "react component",
+    "animation",
+    "animate",
+    "transition",
+    "fade"
+  ],
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -23,5 +35,17 @@
     "@storybook/react": "^3.3.14",
     "gh-pages": "^1.1.0",
     "microbundle": "^0.4.4"
-  }
+  },
+  "bugs": { 
+    "url" : "https://github.com/FredericHeem/react-leanimate/issues"
+  },
+  "repository" :{ 
+    "type" : "git",
+    "url" : "github:FredericHeem/react-leanimate"
+  },
+  "license" : "MIT",
+  "files":[
+    "dist",
+    "src/Animate.js"
+  ]
 }
