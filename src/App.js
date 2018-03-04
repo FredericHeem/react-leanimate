@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Animate from "./Animate";
 
@@ -17,8 +16,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">react-leanimate</h1>
+          <h2 className="App-title">Animate your React application under 1kB</h2>
         </header>
         <button onClick={() => this.setState({ show: !state.show })}>
           Toggle
