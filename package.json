@@ -27,7 +27,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build:lib": "microbundle -i src/Animate.js -i src/Smooth.js --external all --jsx React.createElement -o .",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push && git push --tags && npm publish && npm deploy",
     "prepare": "npm run build:lib"
   },
   "devDependencies": {
