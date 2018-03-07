@@ -24,7 +24,7 @@ export default class Morph extends React.Component {
     const { state } = this;
     const me = this;
     return (
-      <div className="morph" style={{overflow: 'hidden'}}
+      <div {...this.props} style={{overflow: 'hidden'}}
         ref={node => {
           if (node && node.innerHTML) {
             if (this.nodeCurrentRect) {

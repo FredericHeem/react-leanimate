@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Animate from "./Animate";
+import Animate from "../Animate";
 
 class Toggler extends Component {
   state = {

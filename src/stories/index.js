@@ -3,6 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import "../App.css";
 import Animate from "../Animate";
+import Smooth from "../Smooth";
+import ShowDetails from "./ShowDetails";
 import Toggler from "./Toggler";
 
 const BoxM = ({ myProp }) => <div className="box-m">{myProp}</div>;
@@ -25,6 +27,8 @@ class Toggle extends Component {
     );
   }
 }
+
+storiesOf("Smooth", module).add("height", () => <ShowDetails />);
 
 storiesOf("Animate", module)
   .add("removal", () => (
@@ -60,6 +64,5 @@ storiesOf("Animate", module)
         />
       )}
     </Toggle>
-  )).add("toggler example", () => (
-    <Toggler/>
-  ));
+  ))
+  .add("toggler example", () => <Toggler />);

@@ -1,7 +1,6 @@
 header {
   padding: 20px;
   background: lightcoral;
-  border-bottom: 1px solid lightgray;
   font-size: 1.3em;
 }
 
@@ -9,12 +8,19 @@ main {
   margin: 40px;
 } 
 .smooth-area{
-  border: 1px solid lightgray;
+  width: 300px;
 }
 
 .test-area{
   width: 500px;
   min-height: 60px;
+}
+
+.box-border {
+  border: gray 1px dashed;
+  margin:10px;
+  padding:10px;
+  box-sizing: border-box;
 }
 
 .box-m {

@@ -3,13 +3,13 @@ import Smooth from "../Smooth";
 
 class ShowDetails extends Component {
   state = {
-    show: true
+    show: false
   };
 
   render() {
     const { state } = this;
     return (
-      <Smooth>
+      <Smooth className="box-border">
         <button onClick={() => this.setState({ show: !state.show })}>
           Show Details
         </button>
