@@ -1,29 +1,20 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 80px;
-}
-
-.App-header {
+header {
   padding: 20px;
-  background: lightgray;
+  background: lightcoral;
   border-bottom: 1px solid lightgray;
+  font-size: 1.3em;
 }
 
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
+main {
+  margin: 40px;
+} 
+.smooth-area{
+  border: 1px solid lightgray;
 }
 
 .test-area{
-  width: 150px;
-  height: 150px;
-  margin: auto;
+  width: 500px;
+  min-height: 60px;
 }
 
 .box-m {
@@ -40,10 +31,6 @@
   margin: auto;
 }
 
-button {
-  margin: 20px;
-  width: 200px;
-}
 @keyframes show-left {
   from { transform: translateX(-100%); opacity: 0}
     to { transform: translateX(0%); opacity: 1 }
