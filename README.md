@@ -1,7 +1,7 @@
-# react-leanimate ![](http://img.badgesize.io/fredericheem/react-leanimate/master/src/Animate.js.svg?compression=gzip) [![npm version](https://badge.fury.io/js/react-leanimate.svg)](https://badge.fury.io/js/react-leanimate)
+# react-leanimate  [![npm version](https://badge.fury.io/js/react-leanimate.svg)](https://badge.fury.io/js/react-leanimate)
 Animate your react application with a lightweight component.  
 
-## Aminate component
+## Aminate component ![](http://img.badgesize.io/fredericheem/react-leanimate/master/src/Animate.js.svg?compression=gzip)
 The problem with animating a react component is simple, you cannot animate a component that has been removed from the DOM. 
 
 The solution is to wrap a component, intercept the unmount lifecycle, clone the underlying DOM node and then apply the desired CSS animation. 
@@ -43,7 +43,7 @@ class Toggler extends Component {
 
 [![Edit react-leanimate example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/rj3m0jq3o4)
 
-## Smooth component
+## Smooth component ![](http://img.badgesize.io/fredericheem/react-leanimate/master/src/Smooth.js.svg?compression=gzip)
 
 When a child component is added or removed, the parent node will have its width or height changed. Use the *Smooth* component to animate this transition.
 
