@@ -44,7 +44,8 @@
   },
   "license": "MIT",
   "files": [
-    "dist",
-    "src/Animate.js"
+    "*.js",
+    "*.js.map",
+    "src/"
   ]
 }
