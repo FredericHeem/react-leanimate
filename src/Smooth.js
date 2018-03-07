@@ -47,7 +47,6 @@ export default class Smooth extends React.Component {
   }
 
   render() {
-    const { state } = this;
     const me = this;
     return (
       <div
@@ -63,7 +62,7 @@ export default class Smooth extends React.Component {
               const cssElement = createKeyFrameTag(keyFrame, name);
               removeCssElement(this.cssElem);
               this.cssElem = cssElement;
-              node.style.animation = `${name} 0.3s`;
+              node.style.animation = `${name} 0.3s ease-out`;
               const animationBeginHandler = () => {
                 node.removeEventListener("animationend", animationBeginHandler);
                 this.nodeCurrentRect = node.getBoundingClientRect();

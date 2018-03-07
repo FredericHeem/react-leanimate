@@ -1,6 +1,7 @@
 # react-leanimate ![](http://img.badgesize.io/fredericheem/react-leanimate/master/src/Animate.js.svg?compression=gzip) [![npm version](https://badge.fury.io/js/react-leanimate.svg)](https://badge.fury.io/js/react-leanimate)
 Animate your react application with a lightweight component.  
 
+## Aminate component
 The problem with animating a react component is simple, you cannot animate a component that has been removed from the DOM. 
 
 The solution is to wrap a component, intercept the unmount lifecycle, clone the underlying DOM node and then apply the desired CSS animation. 
@@ -9,7 +10,7 @@ Here is a basic example of how to use the *Animate* component:
 
 ```jsx
 import React, { Component } from "react";
-import Animate from "react-leanimate";
+import Animate from "react-leanimate/Animate";
 
 class Toggler extends Component {
   state = {
@@ -42,6 +43,39 @@ class Toggler extends Component {
 
 [![Edit react-leanimate example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/rj3m0jq3o4)
 
+## Smooth component
+
+When a child component is added or removed, the parent node will have its width or height changed. Use the *Smooth* component to animate this transition.
+
+Example:
+
+```jsx
+import React, { Component } from "react";
+import Smooth from "react-leanimate/Smooth";
+
+class ShowDetails extends Component {
+  state = {
+    show: false
+  };
+
+  render() {
+    const { state } = this;
+    return (
+      <Smooth className="box-border">
+        <button onClick={() => this.setState({ show: !state.show })}>
+          Show Details
+        </button>
+        <div>
+          {state.show && <div>Details here</div>}
+        </div>
+      </Smooth>
+    );
+  }
+}
+```
+
+
+
 ## Installing this library
 
 The library is published under the *react-leanimate* name
@@ -55,10 +89,15 @@ The library is published under the *react-leanimate* name
 
 ```sh
 $ npm run build:lib
+> microbundle -i src/Animate.js -i src/Smooth.js --external all --jsx React.createElement
+
 Build output to dist:
-        588 B: react-leanimate.js
-        573 B: react-leanimate.m.js
-        662 B: react-leanimate.umd.js
+        609 B: Animate.js
+        575 B: Animate.m.js
+        673 B: Animate.umd.js
+        718 B: Smooth.js
+        684 B: Smooth.m.js
+        782 B: Smooth.umd.js
  ```
 
 ## Modifying this library
