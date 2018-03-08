@@ -2,7 +2,7 @@
   "name": "react-leanimate",
   "description": "a lightweight library to animate react components",
   "homepage": "http://fredericheem.github.io/react-leanimate",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "private": false,
   "source": "src/Animate.js",
   "keywords": [
@@ -26,7 +26,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build:lib": "microbundle -i src/Animate.js -i src/Smooth.js --external all --jsx React.createElement -o .",
+    "build:lib": "microbundle -i src/Animate.js -i src/Smooth.js --external all --jsx React.createElement",
     "postversion": "npm publish && npm run deploy && git push && git push --tags",
     "prepare": "npm run build:lib"
   },
@@ -42,10 +42,5 @@
     "type": "git",
     "url": "github:FredericHeem/react-leanimate"
   },
-  "license": "MIT",
-  "files": [
-    "*.js",
-    "*.js.map",
-    "src/"
-  ]
+  "license": "MIT"
 }
