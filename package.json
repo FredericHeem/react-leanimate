@@ -2,7 +2,7 @@
   "name": "react-leanimate",
   "description": "a lightweight library to animate react components",
   "homepage": "http://fredericheem.github.io/react-leanimate",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "private": false,
   "source": "src/Animate.js",
   "keywords": [
