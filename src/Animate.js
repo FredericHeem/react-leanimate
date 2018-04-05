@@ -56,7 +56,7 @@ export default class Animate extends React.Component {
     const { state } = this;
     const me = this;
     return (
-      <div
+      <div {...this.props}
         ref={node => {
           if (node && node.innerHTML) {
             node.style.animation = this.props.animationShow;
