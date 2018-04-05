@@ -13,6 +13,7 @@
     "transition",
     "fade"
   ],
+  "files": ["Animate.*", "Smooth.*"],
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
