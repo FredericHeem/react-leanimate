@@ -13,10 +13,9 @@
     "transition",
     "fade"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-dom": "^16.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,6 +30,7 @@
     "prepare": "npm run build:lib"
   },
   "devDependencies": {
+    "react-scripts": "1.1.1",
     "@storybook/react": "^3.3.14",
     "gh-pages": "^1.1.0",
     "microbundle": "^0.4.4"
