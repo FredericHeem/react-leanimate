@@ -76,7 +76,7 @@ class ShowDetails extends Component {
 }
 ```
 
-[![Edit react-leanimate <Smooth/>](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/3vx4l4qlxp)
+[![Edit react-leanimate <Smooth/>](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/3vx4l4qlxp) [![Greenkeeper badge](https://badges.greenkeeper.io/FredericHeem/react-leanimate.svg)](https://greenkeeper.io/)
 
 ## Installing this library
 
